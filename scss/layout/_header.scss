@@ -1,0 +1,119 @@
+.main-header {
+  @include flex-align-center;
+  width: 100%;
+  max-width: $max-width;
+  height: 100px;
+  background-color: #fff;
+  padding: 0 4%;
+  border-bottom: 1px solid #f1f1f5;
+  position: relative;
+  z-index: 1000;
+}
+.main-logo {
+  width: 20%;
+  float: left;
+}
+.main-logo img {
+  width: 100%;
+  max-width: 83px;
+}
+.main-header nav {
+  width: 72%;
+  text-align: right;
+  margin-right: 2%;
+}
+.mob-btn {
+  display: none;
+}
+.main-header nav > ul > li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 100px;
+  padding-right: 3%;
+  padding-left: 3%;
+  line-height: 7;
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: $brand-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+.main-header nav > ul > li.sub:after {
+  display: none;
+}
+.main-header nav > ul > li.sub > ul {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  left: -10px;
+  min-width: 91px;
+  padding: 5px 20px 0;
+  background-color: #fff;
+  z-index: 10;
+  @include transition;
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: $brand-color;
+    position: absolute;
+    top: 1px;
+    left: 0;
+  }
+}
+.main-header nav > ul > li.sub:hover ul {
+  width: auto;
+  height: auto;
+  opacity: 1;
+}
+.main-header nav > ul > li.sub:hover ul:after {
+  width: 100%;
+  @include transition;
+}
+.main-header nav > ul > li.sub > ul li {
+  text-align: left;
+  line-height: 3.2;
+}
+.main-header nav > ul > li a {
+  text-transform: uppercase;
+  color: $nav-item-color;
+  &:hover {
+    color: black;
+  }
+}
+.main-header nav > ul > li.sub > a {
+  &:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 7px;
+    margin-left: 3px;
+    background: url(../img/sub-i.png)no-repeat center top;
+  }
+}
+.search-btn {
+  width: 65px;
+  height: 30px;
+  background: none;
+  border: none;
+  border-left: 1px solid #e8e8e8;
+  span.search-i {
+    display: block;
+    width: 100%;
+    height: 20px;
+    background: url(../img/search.svg)no-repeat right center;
+  }
+}

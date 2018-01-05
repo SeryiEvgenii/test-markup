@@ -1,0 +1,132 @@
+.push,
+footer {
+  height: 163px;
+  clear: both;
+}
+footer {
+  max-width: $max-width;
+  margin: -162px auto 0;
+  background-color: #fff;
+  padding: 0 2%;
+  border-top: 1px solid #f1f1f5;
+  position: relative;
+}
+.footer-top {
+  @include flex-align-center;
+  width: 100%;
+  position: relative;
+  top: -1px;
+}
+.footer-nav {
+  width: 70%;
+  text-align: left;
+}
+.footer-nav > li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 115px;
+  padding: 0 3.5%;
+  line-height: 9;
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: $brand-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+.footer-nav > li a {
+  text-transform: uppercase;
+  color: $nav-item-color;
+  &:hover {
+    color: $title-color;
+  }
+}
+.footer-copiright {
+  text-align: right;
+  color: $light-grey;
+}
+.social-network {
+  width: 30%;
+  text-align: right;
+  padding-top: 10px;
+  li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 3%;
+    a {
+      color: transparent;
+      span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 37px;
+          height: 37px;
+          border-radius: 100%;
+        }
+        &:before {
+          border: 1px solid transparent;
+        }
+        &:after {
+          border: 0 solid transparent;
+        }
+        &:hover:before {
+          border-top-color: $brand-color;
+          border-right-color: $brand-color;
+          border-bottom-color: $brand-color;
+          -webkit-transition: border-top-color 0.15s linear,
+            border-right-color 0.15s linear 0.1s,
+            border-bottom-color 0.15s linear 0.2s;
+          transition: border-top-color 0.15s linear,
+            border-right-color 0.15s linear 0.1s,
+            border-bottom-color 0.15s linear 0.2s;
+        }
+        &:hover:after {
+          border-top: 1px solid $brand-color;
+          border-left-width: 1px;
+          border-right-width: 1px;
+          -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+          -webkit-transition: border-left-width 0s linear 0.35s,
+            -webkit-transform 0.4s linear 0s;
+          transition: border-left-width 0s linear 0.35s,
+            -webkit-transform 0.4s linear 0s;
+          transition: transform 0.4s linear 0s,
+            border-left-width 0s linear 0.35s;
+          transition: transform 0.4s linear 0s,
+            border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+        }
+        &:hover img {
+          transform: scale(1.2);
+          transition: all 0.3s ease;
+        }
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      &:hover img {
+        color: #000;
+      }
+    }
+  }
+}

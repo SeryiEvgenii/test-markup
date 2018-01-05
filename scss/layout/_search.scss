@@ -1,0 +1,97 @@
+.search-pop-up {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  max-height: 470px;
+  background-color: white;
+  z-index: 10000;
+  @include box-shadow;
+  form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  input[type="text"] {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+    width: 80%;
+    max-width: 975px;
+    border: none;
+    border-bottom: 1px solid #f2f2f6;
+    margin: 0 auto;
+    font-size: 36px;
+    font-weight: 300;
+    padding: 0 0 17px 44px;
+    background: url(../img/search.svg)no-repeat left 13px;
+    background-size: 20px;
+  }
+  .close {
+    width: 16px;
+    height: 16px;
+    background: url(../img/close.png)no-repeat center;
+    position: absolute;
+    top: 40px;
+    right: 55px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #c2c2c2;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #c2c2c2;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #c2c2c2;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #c2c2c2;
+  opacity: 1;
+}
+input.placeholder,
+textarea.placeholder {
+  color: #c2c2c2;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: transparent !important;
+  opacity: 1;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent !important;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: transparent !important;
+  opacity: 1;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent !important;
+}
+input.placeholder:focus,
+textarea.placeholder:focus {
+  color: transparent !important;
+}
+input:focus,
+textarea:focus {
+  box-shadow: none;
+  outline: none;
+}
+input[type="submit"]::-moz-focus-inner {
+  border: 0;
+}
